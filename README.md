@@ -20,9 +20,12 @@ The methodology that we have adopted is outlined below:
 * Next we deploy PyTorch and load a model that has been pre-trained using the COCO data. To further improve our model, we limit the ingredients to a small subset bringing it down from 5,000 to 3108 images. We then apply a split/train of 2,500 images for training and test on 608 images. 
 * Once the ingredients have been identified, we take those identified ingredients, and deploy **natural language processing** and **web-browsing** to search online websites for potential cooking receipes.
 
-##Results
+## Results
 The application is able to detect objects including food ingredients from the target as shown below. 
 ![alt text](https://github.com/marcus-suresh/PyTorch_food_recognition/blob/main/11.png)
 ![alt text](https://github.com/marcus-suresh/PyTorch_food_recognition/blob/main/12.png)
 
+## Citation
+Marcus Suresh 2022
+https://github.com/marcus-suresh
 
