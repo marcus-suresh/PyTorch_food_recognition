@@ -9,11 +9,13 @@ The proliferation of food-related images dominating social media is a reflection
 ## Pipeline
 In order to achieve our aim of retrieving gourmet recipes from a single image of food, we must first expose the Regional-Based Convolutional Neural Network to the training data of food images along with their labels. Ultimately this will help us achieve our goal. That is an application that accepts as an input - a single food which the RCNN algorithm will process and analyse as the source target for retrieving recipes.  
 
+## Methodology
+The methodology that we have adopted is outlined below:
+* Firstly, we set up our Google Colab environment by mounting to Google Drive, and the import the necessary Python 3 packages along with their dependencies which include **Pytorch, Torchvision, OpenCV and FiftyOne**.
+* We then ingest the **Food 101 data set** and iterate through the images in the output folder including all its subdirectories and create a new directory to store all images without hierarchy sub-folders on to our mounted Google Drive. The length of the directory now stands at 101,000 images. Given the sheer size of the dataset and our limited computational resources, we took an approximate 5 per cent sub-sample of the data of 5,000 randomised images. As we have unlabeled images, we will first need to generate object labels. We can generate ground truth labels with an existing pretrained model.
+* We then load unlabeled data into FiftyOne (an open-source tool for building high-quality datasets and computer vision models) and generate predictions with the FiftyOne Model Zoo, which is contains a collection of pre-trained models that can be downloaded and run inference on any FiftyOne data sets.
+* Using the labelled data from the previous step, we then export the labelled data into COCO format which is a large image data set designed for object detection, segmentation and caption generation. The rationale for using the COCO format is due to the superior performance. It contains 2.5 million labelled instances in 382,000 images. Given this, the literature suggests that the COCO dataset is particularly adept at training models to detect objects such as in our case. 
+* Next we deploy PyTorch and load a model that has been pre-trained using the COCO data. To further improve our model, we limit the ingredients to a small subset bringing it down from 5,000 to 3108 images. We then apply a split/train of 2,500 images for training and test on 608 images. 
+* Once the ingredients have been identified, we take those identified ingredients, and deploy **natural language processing** and **web-browsing** to search online websites for potential cooking receipes.
 
-## Datasets
-
-The datasets Ingredients101 and Recipes5k were used to evaluate this model:
-* [Ingredients 101](http://www.ub.edu/cvub/ingredients101/):  It consists of the list of most common ingredients for each of the 101 types of food contained in the Food101 dataset, making a total of 446 unique ingredients (9 per recipe on average). The dataset was divided in training, validation and test splits making sure that the 101 food types were balanced. We make public the lists of ingredients together with the train/val/test split applied to the images from the Food101 dataset.
-* [Recipes5k](http://www.ub.edu/cvub/recipes5k/): Dataset for ingredients recognition with 4,826 unique recipes composed of an image and the corresponding list of ingredients. It contains a total of 3,213 unique ingredients (10 per recipe on average) and a simplified version of 1,013 ingredients. Each recipe is an alternative way to prepare one of the 101 food types in Food101. Hence, it captures at the same time the intra-class variability and inter-class similarity of cooking recipes. The nearly 50 alternative recipes belonging to each of the 101 classes were divided in train, val and test splits in a balanced way. We make also public this dataset together with the splits division.
-
-## Citation
+![alt text](http://url/to/img.png)
