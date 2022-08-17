@@ -2,6 +2,8 @@
 
 This repository contains the code for applying a PyTorch-centric CV-based ingredients recognition application through multi-label learning.
 
+![alt text](https://github.com/marcus-suresh/PyTorch_food_recognition/blob/main/PyTorch.png)
+
 ## Abstract
 The proliferation of food-related images dominating social media is a reflection of modern culture. Food has transcended from being a form of mere nourishment, to what can now be characterised as an essential component for human interaction and bonding. It is therefore unsurprising that food-related images are a topic of keen interest. In this paper, we present our computer vision application that identifies ingredients visible in a dish and retrieves possible recipes using those ingredients to encourage culinary inquisity. We combine *computer vision, deep learning and natural language processing* to present the end-user with curated intelligence to explore and create new dishes using a variety of recipes. In this paper, we outline our methodology and performance results in detecting and retrieving the necessary information using multimedia data. Overall, our Food Ingredient Retrieval application achieves a Mean Average Precision of 0.44.
 
@@ -18,4 +20,4 @@ The methodology that we have adopted is outlined below:
 * Next we deploy PyTorch and load a model that has been pre-trained using the COCO data. To further improve our model, we limit the ingredients to a small subset bringing it down from 5,000 to 3108 images. We then apply a split/train of 2,500 images for training and test on 608 images. 
 * Once the ingredients have been identified, we take those identified ingredients, and deploy **natural language processing** and **web-browsing** to search online websites for potential cooking receipes.
 
-![alt text](http://url/to/img.png)
+
