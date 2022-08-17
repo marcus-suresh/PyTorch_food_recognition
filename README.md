@@ -26,6 +26,6 @@ The application is able to detect objects including food ingredients from the ta
 ![alt text](https://github.com/marcus-suresh/PyTorch_food_recognition/blob/main/12.png)
 
 ## Citation
-Marcus Suresh 2022
+M.Suresh (2022)
 https://github.com/marcus-suresh
 
