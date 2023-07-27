@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+"""
+
 # PyTorch object detection model training
 
 [PyTorch](https://pytorch.org/) datasets provide a great starting point for loading complex datasets, letting you define a class to load individual samples from disk and then creating data loaders to efficiently supply the data to your model. Problems arise when you want to start iterating over your dataset itself. PyTorch datasets are fairly rigid and require you to either rewrite them or the underlying data on disk if you want to make any changes to the data you are training or testing your model on. That is where [FiftyOne](http://fiftyone.ai) comes in.
@@ -404,4 +406,3 @@ Even though this example workflow may not work in all situations, this kind of c
 
 PyTorch and related frameworks provide quick and easy methods to bootstrap your model development and training pipelines. However, they largely overlook the need to massage and finetune datasets to efficiently improve performance. FiftyOne makes it easy to load your datasets into a flexible format that works well with existing tools allowing you to provide better data for training and testing. As they say, "garbage in, garbage out".
 """
-
