@@ -1,17 +1,16 @@
-# Food Ingredients Recognition through Computer Vision Multi-Label Learning
+# 👁️ Food Ingredients Recognition through Computer Vision Multi-Label Learning 👥
 
 This repository contains the code for applying a PyTorch-centric CV-based ingredients recognition application through multi-label learning.
 
 ![alt text](https://github.com/marcus-suresh/PyTorch_food_recognition/blob/main/_admin_/PyTorch.png)
 
-## Abstract
+## 🎯 Aim
 The proliferation of food-related images dominating social media is a reflection of modern culture. Food has transcended from being a form of mere nourishment, to what can now be characterised as an essential component for human interaction and bonding. It is therefore unsurprising that food-related images are a topic of keen interest. In this paper, we present our computer vision application that identifies ingredients visible in a dish and retrieves possible recipes using those ingredients to encourage culinary inquisity. We combine *computer vision, deep learning and natural language processing* to present the end-user with curated intelligence to explore and create new dishes using a variety of recipes. In this paper, we outline our methodology and performance results in detecting and retrieving the necessary information using multimedia data. Overall, our Food Ingredient Retrieval application achieves a Mean Average Precision of 0.44.
 
-
-## Pipeline
+## 🛣️ Pipeline
 In order to achieve our aim of retrieving gourmet recipes from a single image of food, we must first expose the Regional-Based Convolutional Neural Network to the training data of food images along with their labels. Ultimately this will help us achieve our goal. That is an application that accepts as an input - a single food which the RCNN algorithm will process and analyse as the source target for retrieving recipes.  
 
-## Methodology
+## 📌 Methodology
 The methodology that we have adopted is outlined below:
 * Firstly, we set up our Google Colab environment by mounting to Google Drive, and the import the necessary Python 3 packages along with their dependencies which include **Pytorch, Torchvision, OpenCV and FiftyOne**.
 * We then ingest the **Food 101 data set** and iterate through the images in the output folder including all its subdirectories and create a new directory to store all images without hierarchy sub-folders on to our mounted Google Drive. The length of the directory now stands at 101,000 images. Given the sheer size of the dataset and our limited computational resources, we took an approximate 5 per cent sub-sample of the data of 5,000 randomised images. As we have unlabeled images, we will first need to generate object labels. We can generate ground truth labels with an existing pretrained model.
@@ -20,17 +19,22 @@ The methodology that we have adopted is outlined below:
 * Next we deploy PyTorch and load a model that has been pre-trained using the COCO data. To further improve our model, we limit the ingredients to a small subset bringing it down from 5,000 to 3108 images. We then apply a split/train of 2,500 images for training and test on 608 images. 
 * Once the ingredients have been identified, we take those identified ingredients, and deploy **natural language processing** and **web-browsing** to search online websites for potential cooking receipes.
 
-## Results
+## 🚀 Results
 The application is able to detect objects including food ingredients from the target as shown below. 
 ![alt text](https://github.com/marcus-suresh/PyTorch_food_recognition/blob/main/_admin_/11.png)
 ![alt text](https://github.com/marcus-suresh/PyTorch_food_recognition/blob/main/_admin_/12.png)
 
-## Source
-The .py and .ipynb source codes can be found here: https://github.com/marcus-suresh/PyTorch_food_recognition/blob/main/pytorch_object_detection_food_recognition.py
+## 🚀 Getting Started
+To use this program, please follow these steps:
+1. Clone this repository to your local machine.
+2. Ensure you have a virtual environment with `PyTorch` installed.
 
+## 📁 Source Files
+The **`main_pytorchCV.py`** and **`pytorch_object_detection_food_recognition.ipynb`** are the source files can be found here: https://github.com/marcus-suresh/PyTorch_food_recognition 
 
-
-## Citation
+## 📌 Citation
 M.Suresh (2022)
-https://github.com/marcus-suresh
+https://github.com/marcus-suresh 
+
+
 
