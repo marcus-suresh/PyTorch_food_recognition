@@ -36,5 +36,9 @@ The **`main_pytorchCV.py`** and **`pytorch_object_detection_food_recognition.ipy
 M.Suresh (2022)
 https://github.com/marcus-suresh 
 
+## 📄 License
+This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as per the terms of the license.
+
+If you have any questions or suggestions, please feel free to contact us or open an issue.
 
 
